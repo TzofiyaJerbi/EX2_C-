@@ -9,6 +9,21 @@ using namespace std;
 //	name = N;
 //}
 
+sim::sim(string j)
+{
+	name= j;
+	age = 0;
+	Hunger = 50; Energy = 50;
+}
+
+
+ sim::sim()
+{
+	 name = "Jone Doe";
+	age = 0;
+	Hunger = 50; Energy = 50;
+}
+
 void sim::setAge(int newage)
 {
 	if (newage > -1 && newage < 100)
@@ -16,21 +31,9 @@ void sim::setAge(int newage)
 		age = newage;
 	};
 }
-//
-//void sim::setAge(int A)
-//{
-//}
-//
-//void sim::setHunger(int H)
-//{
-//}
-//
-//void sim::setEnergy(int E)
-//{
-//}
-//
-//void sim::getNname()
-//{
-//}
+
+
+
+
 
 
