@@ -53,7 +53,6 @@ void sim::AgeUp()
 	;
 }
 
-
 void sim::sleep()
 {
 	if (Energy > -1 && Energy < 100)
@@ -65,8 +64,33 @@ void sim::sleep()
 		;
 }
 
+string sim::getNname()const
+{
+	return name;
+}
+
+int sim::getAge()const
+{
+	return age;
+
+}
+int sim::getHunger()const
+{
+	return Hunger;
+
+}
+
+int sim::getEnergy()const
+{
+	return Energy;
+
+}
 
 
+void sim::print()
+{
+	cout << " " << getNname() << ", " << "Age: " << getAge() << ", " << "Hunger: " << getHunger()<< ", " << "Energy: " << getEnergy() << endl;
+}
 
 
 

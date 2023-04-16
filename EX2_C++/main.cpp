@@ -11,7 +11,7 @@ void main()
 	//sim c2(, 50, 50, 60);
 	c2.AgeUp();
 	c1.eat();
-
+	c1.print();
 	///*bool res;*/
 	//int age;
 	//cout << "Enter the age of the sim: ";

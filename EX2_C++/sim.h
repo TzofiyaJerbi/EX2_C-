@@ -15,18 +15,19 @@ public:
 void AgeUp();
 void eat();
 void sleep();
+void print();
 
 	//void setName(int N);
 	
-	/*void setHunger(int H);
-	void setEnergy(int E);
+	//void setHunger(int H);
+	//void setEnergy(int E);
 
-	void getNname();
-	void getAge();
-	void getHunger();
-	void getEnergy();
+	string getNname()const;
+	int getAge()const;
+	int getHunger()const;
+	int getEnergy()const;
 	
-	void print();*/
+
 	
 
 };
