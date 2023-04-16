@@ -9,19 +9,14 @@ using namespace std;
 //	name = N;
 //}
 
- sim::sim() //Default c'tor
-{
-	 name = "Jone Doe";
-	age = 0;
-	Hunger = 50; Energy = 50;
-}
 
- sim::sim(string j)// c'tor get only name
- {
-	 name = j;
-	 age = 0;
-	 Hunger = 50; Energy = 50;
- }
+
+ //sim::sim(string j)// c'tor get only name
+ //{
+	// name = j;
+	// age = 0;
+	// Hunger = 50; Energy = 50;
+ //}
 
  sim::sim(string j, int a, int h, int e)
  {
@@ -94,3 +89,9 @@ void sim::print()
 
 
 
+//sim::sim() //Default c'tor
+//{
+//	name = "Jone Doe";
+//	age = 0;
+//	Hunger = 50; Energy = 50;
+//}

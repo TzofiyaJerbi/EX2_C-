@@ -9,9 +9,10 @@ class sim
 {
 	string name;int age, Hunger, Energy;
 public:
-	sim();//Default c'tor
-	sim(string j);// c'tor get only name
-	sim(string j, int a, int h, int e);// c'tor get all parmeters
+	
+	sim(string = "Jone Doe", int a = 0, int h = 50, int e = 50);//Default c'tor
+//	sim(string j);// c'tor get only name
+	
 void AgeUp();
 void eat();
 void sleep();

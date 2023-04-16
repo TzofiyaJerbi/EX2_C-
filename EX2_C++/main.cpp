@@ -6,19 +6,21 @@ using namespace std;
 void main()
 {
 	sim c;
-	sim c1("gil");
-	sim c2("stav",2,35,40);
-	//sim c2(, 50, 50, 60);
-	c2.AgeUp();
-	c1.eat();
+	sim c1("stav");
+	sim c2("gil", 50, 50, 60);
 	c1.print();
-	///*bool res;*/
-	//int age;
-	//cout << "Enter the age of the sim: ";
-	//	cin >> age;
-	//	cout << endl;
-	//	c.setAge(age);
+	
 
 	system("pause");
 	return;
 }
+
+
+
+//string n = "stav";
+//string temp = c1.getNname();
+//int j = 0;
+//if (n == temp)
+//{
+//	j = 10;
+//}
