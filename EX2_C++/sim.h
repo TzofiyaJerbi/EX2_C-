@@ -1,5 +1,5 @@
-#ifndef SIM_H
-#define SIM_H
+#ifndef SIM__H
+#define SIM__H
 #include<iostream>
 #include <iomanip>
 using namespace std;
