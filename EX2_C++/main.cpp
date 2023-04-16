@@ -5,10 +5,12 @@ using namespace std;
 
 void main()
 {
-	sim c1;
+	sim c;
+	sim c1("gil");
+	sim c2("stav",2,35,40);
 	//sim c2(, 50, 50, 60);
-
-
+	c2.AgeUp();
+	c1.eat();
 
 	///*bool res;*/
 	//int age;

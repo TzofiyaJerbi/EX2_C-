@@ -9,27 +9,60 @@ using namespace std;
 //	name = N;
 //}
 
-sim::sim(string j)
-{
-	name= j;
-	age = 0;
-	Hunger = 50; Energy = 50;
-}
-
-
- sim::sim()
+ sim::sim() //Default c'tor
 {
 	 name = "Jone Doe";
 	age = 0;
 	Hunger = 50; Energy = 50;
 }
 
-void sim::setAge(int newage)
+ sim::sim(string j)// c'tor get only name
+ {
+	 name = j;
+	 age = 0;
+	 Hunger = 50; Energy = 50;
+ }
+
+ sim::sim(string j, int a, int h, int e)
+ {
+	 name = j;
+	 age = a;
+	 Hunger = h;
+	 Energy = e;
+ }
+
+ void sim::eat()
+ {
+	 if (Hunger > -1 && Hunger < 100)
+	 {
+		 Hunger= Hunger +15;
+	 }
+	 else
+		 cout << "Error with the eat!"
+	 ;
+ }
+
+void sim::AgeUp()
 {
-	if (newage > -1 && newage < 100)
+	if (age > -1 && age < 100)
 	{
-		age = newage;
-	};
+		age++;
+	}
+	else
+		cout << "Error with the age!"
+	;
+}
+
+
+void sim::sleep()
+{
+	if (Energy > -1 && Energy < 100)
+	{
+		Energy= Energy+15;
+	}
+	else
+		cout << "Error with the Energy!"
+		;
 }
 
 
