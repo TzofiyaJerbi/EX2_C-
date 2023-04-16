@@ -8,16 +8,15 @@ using namespace std;
 class Game
 {
 	int NumOfSims, CorrectNumOfSim;
-
+	sim** Sims = new sim*[NumOfSims];
 public:
 
-	
-
-	void setNumOfSims();
-	//void addSim();
-
-
-
+	void setNumOfSims(int n);
+	//void HowMuchSimsNow();
+	void addSim();
+	int getNumOfSims()const;
+	int getCorrectNumOfSim()const;
+	void print()const;
 
 };
 
