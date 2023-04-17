@@ -21,8 +21,8 @@ game.addSim();
 		endl << "-1) Exit..."<<endl;
 		cin >> numbercase;
 		int n = 1;
-		while (n!=0)
-		{
+		//while (n!=0)
+		//{
 
 		
 	switch (numbercase)
@@ -42,7 +42,7 @@ game.addSim();
 	default:
 		break;
 	}
-		}
+	//	}
 
 	system("pause");
 	
