@@ -31,5 +31,20 @@ int Game::getCorrectNumOfSim()const
 
 void Game::print()const
 {
-	cout << getCorrectNumOfSim()<<endl;
+	
+	cout << "Number of sim in the game: " << getCorrectNumOfSim() << endl;
+	cout<< "Details about the players: "<< endl;
+	
+	for (int i = 0; i < getCorrectNumOfSim(); i++)
+	{
+
+		
+		cout << " " << Sims[i]->getName() << ", " << "Age: " << Sims[i]->getAge() << ", " << "Hunger: " << Sims[i]->getHunger() << ", " << "Energy: " << Sims[i]->getEnergy() << endl;
+		
+
+	}
+	
+	
+	
+	//cout << getCorrectNumOfSim()<<endl;
 }

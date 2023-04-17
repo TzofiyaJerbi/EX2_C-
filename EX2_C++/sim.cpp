@@ -59,7 +59,7 @@ void sim::sleep()
 		;
 }
 
-string sim::getNname()const
+string sim::getName()const
 {
 	return name;
 }
@@ -84,7 +84,7 @@ int sim::getEnergy()const
 
 void sim::print()
 {
-	cout << " " << getNname() << ", " << "Age: " << getAge() << ", " << "Hunger: " << getHunger()<< ", " << "Energy: " << getEnergy() << endl;
+	cout << " " << getName() << ", " << "Age: " << getAge() << ", " << "Hunger: " << getHunger()<< ", " << "Energy: " << getEnergy() << endl;
 }
 
 

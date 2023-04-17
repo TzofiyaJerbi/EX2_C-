@@ -23,7 +23,7 @@ void print();
 	//void setHunger(int H);
 	//void setEnergy(int E);
 
-	string getNname()const;
+	string getName()const;
 	int getAge()const;
 	int getHunger()const;
 	int getEnergy()const;
