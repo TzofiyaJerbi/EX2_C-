@@ -17,6 +17,7 @@ public:
 	int getNumOfSims()const;
 	int getCorrectNumOfSim()const;
 	void print()const;
+	int findSim(string n);
 
 };
 

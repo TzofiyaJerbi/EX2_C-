@@ -38,13 +38,26 @@ void Game::print()const
 	for (int i = 0; i < getCorrectNumOfSim(); i++)
 	{
 
-		
 		cout << " " << Sims[i]->getName() << ", " << "Age: " << Sims[i]->getAge() << ", " << "Hunger: " << Sims[i]->getHunger() << ", " << "Energy: " << Sims[i]->getEnergy() << endl;
 		
-
 	}
 	
 	
 	
 	//cout << getCorrectNumOfSim()<<endl;
+}
+
+int Game::findSim(string n)
+{
+	int num = getCorrectNumOfSim();
+	for (int i = 0; i < num; i++)
+	{
+		if (Sims[i]->getName() == n)
+		{
+			return i;
+		}
+	}
+			cout << "Sim not fuond!" << endl;
+		
+	
 }
