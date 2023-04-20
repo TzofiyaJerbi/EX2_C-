@@ -2,6 +2,8 @@
 #define SIM__H
 #include<iostream>
 #include <iomanip>
+#include <random>
+#include <cstdlib>
 using namespace std;
 
 
@@ -15,8 +17,14 @@ public:
 	
 void AgeUp();
 void eat();
+void eatdown();
 void sleep();
+void sleepdown();
 void print();
+int rundnumber_15();
+
+
+
 
 	//void setName(int N);
 	
@@ -27,10 +35,14 @@ void print();
 	int getAge()const;
 	int getHunger()const;
 	int getEnergy()const;
-	
+
 
 	
 
+	~sim() { cout << "good"; };
+
+	
+	friend class Game;
 };
 
 #endif // !SIM_H

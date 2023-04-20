@@ -3,6 +3,8 @@
 #include<iostream>
 #include <iomanip>
 #include"sim.h"
+#include <random>
+#include <cstdlib>
 using namespace std;
 
 class Game
@@ -16,9 +18,14 @@ public:
 	void addSim();
 	int getNumOfSims()const;
 	int getCorrectNumOfSim()const;
-	void print()const;
+	void printGameState()const;
 	int findSim(string n);
+	void performAction();
+	void passtime();
+	
 
 };
 
 #endif
+
+

@@ -1,6 +1,8 @@
 #include "sim.h"
 #include<iostream>
 #include <iomanip>
+#include <random>
+#include <cstdlib>
 using namespace std;
 
 //void sim::setName(int N)
@@ -30,11 +32,22 @@ using namespace std;
  {
 	 if (Hunger > -1 && Hunger < 100)
 	 {
-		 Hunger= Hunger +15;
+		 Hunger = Hunger + 15;
 	 }
 	 else
-		 cout << "Error with the eat!"
+		 cout << "Error with the " << getName() << " eat!" << endl;
 	 ;
+ }
+
+ void sim::eatdown()
+ {
+	 if (Hunger > 14 && Hunger < 75)
+	 {
+		 Hunger = Hunger - rundnumber_15();
+	 }
+	 else
+		 cout << "Error with the " <<getName()<< " eat!" << endl;
+		 ;
  }
 
 void sim::AgeUp()
@@ -44,7 +57,7 @@ void sim::AgeUp()
 		age++;
 	}
 	else
-		cout << "Error with the age!"
+		cout << "Error with the " << getName() << " ge!" << endl;
 	;
 }
 
@@ -52,10 +65,23 @@ void sim::sleep()
 {
 	if (Energy > -1 && Energy < 100)
 	{
-		Energy= Energy+15;
+		int n;
+		n = rand();
+		Energy = Energy + 15;
 	}
 	else
-		cout << "Error with the Energy!"
+		cout << "Error with the " << getName() << " energy!" << endl;
+		;
+}
+
+void sim::sleepdown()
+{
+	if (Energy > 14 && Energy < 75)
+	{
+		Energy = Energy - rundnumber_15();
+	}
+	else
+		cout << "Error with the " << getName() << " energy!"<<endl;
 		;
 }
 
@@ -85,7 +111,21 @@ int sim::getEnergy()const
 void sim::print()
 {
 	cout << " " << getName() << ", " << "Age: " << getAge() << ", " << "Hunger: " << getHunger()<< ", " << "Energy: " << getEnergy() << endl;
+	 //cout << " " << name << ", " << "Age: " << this->age << ", " << "Hunger: " << this->Hunger << ", " << "Energy: " << this->Energy << endl;
+	 //cout << " " << this->name << ", " << "Age: " << this->age << ", " << "Hunger: " << this->Hunger << ", " << "Energy: " << this->Energy << endl;
+
 }
+
+int sim::rundnumber_15()
+{
+	srand(time(NULL));
+	int N = 16;
+	int	numberrandom = rand() % N;
+    return numberrandom;
+		
+	
+}
+
 
 
 

@@ -1,5 +1,7 @@
 #include "Game.h"
 #include"sim.h"
+#include <random>
+#include <cstdlib>
 int i = 0;
 void Game::setNumOfSims(int n)
 {
@@ -13,8 +15,12 @@ void Game::addSim()
 	
 	if (i < getNumOfSims())
 	{
-		Sims[i] = new sim;
+		string n;
+		cout << "Enter a name: ";
+		cin >> n;
+		Sims[i] = new sim(n);
 		CorrectNumOfSim = i + 1;
+		
 i++;
 	}
 }
@@ -29,7 +35,7 @@ int Game::getCorrectNumOfSim()const
 	return CorrectNumOfSim;
 }
 
-void Game::print()const
+void Game::printGameState()const
 {
 	
 	cout << "Number of sim in the game: " << getCorrectNumOfSim() << endl;
@@ -54,6 +60,7 @@ int Game::findSim(string n)
 	{
 		if (Sims[i]->getName() == n)
 		{
+			cout << Sims[i]->getName()<<" His found!"<<endl;
 			return i;
 		}
 	}
@@ -61,3 +68,47 @@ int Game::findSim(string n)
 		
 	
 }
+
+void Game::performAction()
+{
+	int cho=5;
+	string NameToFind;
+	cout << "Slect sim to action: ";
+	cin >> NameToFind;
+	cout << endl;
+	int i;
+	i = findSim(NameToFind);
+	cout << "Choose action (0 - eat , 1 - sleep, 2 - age up): ";
+	cout << endl;
+	cin >> cho;
+	switch (cho)
+	{
+		case 0:
+			 Sims[i]->eat();
+			break;
+
+		case 1:
+			Sims[i]->sleep();
+			break;
+
+		case 2:
+			Sims[i]->AgeUp();
+			break;
+
+		
+	}
+
+}
+
+void Game::passtime()
+{
+	for (int i = 0; i < getCorrectNumOfSim(); i++)
+	{
+		Sims[i]->eatdown(); Sims[i]->sleepdown();
+	}
+
+}
+
+
+
+
