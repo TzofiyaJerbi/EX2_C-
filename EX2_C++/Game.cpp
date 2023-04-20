@@ -3,6 +3,13 @@
 #include <random>
 #include <cstdlib>
 int i = 0;
+Game::Game(const Game& other)
+{
+	*Sims = new sim;
+	NumOfSims = other.NumOfSims;
+	NumOfSims = other.CorrectNumOfSim;
+}
+	
 void Game::setNumOfSims(int n)
 {
 	NumOfSims = n;
@@ -108,6 +115,16 @@ void Game::passtime()
 	}
 
 }
+
+//void Game::deletesim()
+//{
+//	for (int i = 0; i < getCorrectNumOfSim(); i++)
+//	{
+//		delete[] Sims;
+//	}
+//	
+//}
+
 
 
 

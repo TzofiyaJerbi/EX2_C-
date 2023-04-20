@@ -13,6 +13,7 @@ class sim
 public:
 	
 	sim(string = "Jone Doe", int a = 0, int h = 50, int e = 50);//Default c'tor
+	sim(const sim& other);
 //	sim(string j);// c'tor get only name
 	
 void AgeUp();
@@ -23,23 +24,13 @@ void sleepdown();
 void print();
 int rundnumber_15();
 
-
-
-
-	//void setName(int N);
-	
-	//void setHunger(int H);
-	//void setEnergy(int E);
-
 	string getName()const;
 	int getAge()const;
 	int getHunger()const;
 	int getEnergy()const;
+	 ~sim() {}
 
 
-	
-
-	~sim() { cout << "good"; };
 
 	
 	friend class Game;

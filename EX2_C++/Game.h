@@ -12,7 +12,9 @@ class Game
 	int NumOfSims, CorrectNumOfSim;
 	sim** Sims = new sim*[NumOfSims];
 public:
-
+	Game()=default;
+	Game(const Game& other);
+	//Game(const Game& other);
 	void setNumOfSims(int n);
 	//void HowMuchSimsNow();
 	void addSim();
@@ -22,7 +24,9 @@ public:
 	int findSim(string n);
 	void performAction();
 	void passtime();
-	
+	//void deletesim();
+	~Game(){}
+
 
 };
 

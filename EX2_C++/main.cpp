@@ -39,7 +39,7 @@ void main()
 		break;
 		
 	case -1:
-
+		//game.deletesim();
 		n=0;
 
 	default:
@@ -53,24 +53,4 @@ void main()
 }
 
 
-
-//#include <random>
-//#include <cstdlib>
-//#include <iostream>
-//
-//using namespace std;
-//
-//int main()
-//{
-//
-//    srand(time(NULL));
-//    int N = 16;
-//    // This program will create some sequence of random
-//    // numbers on every program run within range 0 to N-1
-//    for (int i = 0; i < 5; i++)
-//        
-//        cout << rand() % N << " ";
-//
-//    return 0;
-//}
 
