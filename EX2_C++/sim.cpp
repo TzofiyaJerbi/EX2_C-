@@ -20,7 +20,7 @@ using namespace std;
 	// Hunger = 50; Energy = 50;
  //}
 
- sim::sim(string j, int a, int h, int e)
+ sim::sim(string j, int a, int h, int e) 
  {
 	 name = j;
 	 age = a;

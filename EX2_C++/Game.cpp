@@ -2,6 +2,7 @@
 #include"sim.h"
 #include <random>
 #include <cstdlib>
+#include <string>
 int i = 0;
 Game::Game(const Game& other)
 {
@@ -25,7 +26,11 @@ void Game::addSim()
 		string n;
 		cout << "Enter a name: ";
 		cin >> n;
-		Sims[i] = new sim(n);
+
+		{
+			Sims[i] = new sim(n);
+		}
+		
 		CorrectNumOfSim = i + 1;
 		
 i++;
