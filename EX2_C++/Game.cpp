@@ -17,7 +17,6 @@ void Game::setNumOfSims(int n)
 
 }
 
-
 void Game::addSim()
 {
 	
@@ -26,14 +25,10 @@ void Game::addSim()
 		string n;
 		cout << "Enter a name: ";
 		cin >> n;
-
-		{
-			Sims[i] = new sim(n);
-		}
-		
+		Sims[i] = new sim(n);	
+	
 		CorrectNumOfSim = i + 1;
-		
-i++;
+		i++;
 	}
 }
 
@@ -50,19 +45,13 @@ int Game::getCorrectNumOfSim()const
 void Game::printGameState()const
 {
 	
-	cout << "Number of sim in the game: " << getCorrectNumOfSim() << endl;
+	cout << "Number of sim in the game: " << getCorrectNumOfSim() << " out of: "<< getNumOfSims()<< endl;
 	cout<< "Details about the players: "<< endl;
 	
 	for (int i = 0; i < getCorrectNumOfSim(); i++)
 	{
-
 		cout << " " << Sims[i]->getName() << ", " << "Age: " << Sims[i]->getAge() << ", " << "Hunger: " << Sims[i]->getHunger() << ", " << "Energy: " << Sims[i]->getEnergy() << endl;
-		
 	}
-	
-	
-	
-	//cout << getCorrectNumOfSim()<<endl;
 }
 
 int Game::findSim(string n)
@@ -77,15 +66,13 @@ int Game::findSim(string n)
 		}
 	}
 			cout << "Sim not fuond!" << endl;
-		
-	
 }
 
 void Game::performAction()
 {
 	int cho=5;
 	string NameToFind;
-	cout << "Slect sim to action: ";
+	cout << "Write down the name on which you want to perform the operation: ";
 	cin >> NameToFind;
 	cout << endl;
 	int i;
@@ -106,10 +93,7 @@ void Game::performAction()
 		case 2:
 			Sims[i]->AgeUp();
 			break;
-
-		
 	}
-
 }
 
 void Game::passtime()
@@ -121,14 +105,6 @@ void Game::passtime()
 
 }
 
-//void Game::deletesim()
-//{
-//	for (int i = 0; i < getCorrectNumOfSim(); i++)
-//	{
-//		delete[] Sims;
-//	}
-//	
-//}
 
 
 

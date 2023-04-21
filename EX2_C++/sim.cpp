@@ -5,21 +5,6 @@
 #include <cstdlib>
 using namespace std;
 
-//void sim::setName(int N)
-//{
-//	cout << "Enter the name of the next sim: ";
-//	name = N;
-//}
-
-
-
- //sim::sim(string j)// c'tor get only name
- //{
-	// name = j;
-	// age = 0;
-	// Hunger = 50; Energy = 50;
- //}
-
  sim::sim(string j, int a, int h, int e) 
  {
 	 name = j;
@@ -126,12 +111,3 @@ int sim::rundnumber_15()
 	
 }
 
-
-
-
-//sim::sim() //Default c'tor
-//{
-//	name = "Jone Doe";
-//	age = 0;
-//	Hunger = 50; Energy = 50;
-//}

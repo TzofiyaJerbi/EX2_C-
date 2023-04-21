@@ -2,16 +2,12 @@
 #include "Game.h"
 #include<iostream>
 #include <iomanip>
-
 #include <cstdlib>
 #include <random>
 using namespace std;
 
 void main()
 {
-	
-	
-	
 	Game game;
 	game.setNumOfSims(5);
 
@@ -19,6 +15,7 @@ void main()
 	int n = 1;
 		while (n!=0)
 		{
+			cout << endl;
 			cout << "Enter one of the option:" << endl;
 			cout << "1) Add sim" << endl << "2) Print status" << endl << "3) Pass game time" << endl << "4) Perform action on sim" <<
 				endl << "-1) Exit..." << endl;
@@ -39,7 +36,8 @@ void main()
 		break;
 		
 	case -1:
-		//game.deletesim();
+		cout << endl << endl;
+		cout << "Thanks for playing with us! Hope to see you again soon!!!" << endl << endl << endl;
 		n=0;
 
 	default:
@@ -51,6 +49,3 @@ void main()
 	
 	return;
 }
-
-
-
