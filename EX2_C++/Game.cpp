@@ -3,7 +3,6 @@
 #include <random>
 #include <cstdlib>
 #include <string>
-k
 int i = 0;
 Game::Game(const Game& other)
 {
