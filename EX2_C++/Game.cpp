@@ -102,9 +102,10 @@ void Game::passtime()
 	{
 		Sims[i]->eatdown(); Sims[i]->sleepdown();
 	}
-
+Ttofiga
 }
 
+Ttofiga
 
 
 
